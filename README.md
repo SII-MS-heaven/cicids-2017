@@ -1,6 +1,6 @@
 ## CICIDS-2017 dataset processing
 
-This repository describes how to train Machine Learning based NIDS from the [**CICIDS-2017**](https://www.unb.ca/cic/datasets/ids-2017.html) dataset. In particular, it lays out all necessary steps to produce ML/DL exploitable files by processing the raw `pcap` collected in the experiment presented in [1](#references).
+This repository describes how to train Machine Learning based NIDS from the [**CICIDS-2017**](https://www.unb.ca/cic/datasets/ids-2017.html) dataset. In particular, it lays out all necessary steps to produce ML/DL exploitable files by processing the raw `pcap` collected in the experiment presented in [[1]](#references).
 
 It is organized according to the following steps and notebooks:
 1. Flows are first generated from the experiment raw `pcap` with [Zeek](https://docs.zeek.org/en/master/).
@@ -57,7 +57,7 @@ For an Ubuntu 22.04, `Friday-WorkingHours.pcap` can be processed with the follow
 ```
 which will produce a `friday_zeek_logs` folder containing various log files in `TSV` format (i.e. `.csv` file with tabulation separators).
 
-As suggested in [2](#references), the data analysis should then focus on [`conn.log`](https://docs.zeek.org/en/current/logs/conn.html#conn-log) which will be labelled next.
+As suggested in [[2]](#references), the data analysis should then focus on [`conn.log`](https://docs.zeek.org/en/current/logs/conn.html#conn-log) which will be labelled next.
 
 ### Flow labelling - `zeek_labelling.ipynb`
 
@@ -106,8 +106,8 @@ retained input features:
 
 **Credit**:
 This notebook was inspired from code available in the following git repositories:
-- [WTMC2021-Code](https://github.com/GintsEngelen/WTMC2021-Code/blob/main/labelling_CSV_flows.py) which comes with [3](#references).
-- [LYCOS-IDS2017](https://maupiti-git.univ-lemans.fr/lycos/lycos-ids2017/src/master/labelling.py) which comes with [4](#references).
+- [WTMC2021-Code](https://github.com/GintsEngelen/WTMC2021-Code/blob/main/labelling_CSV_flows.py) which comes with [[3]](#references).
+- [LYCOS-IDS2017](https://maupiti-git.univ-lemans.fr/lycos/lycos-ids2017/src/master/labelling.py) which comes with [[4]](#references).
 
 ### Model training - `zeek_ml.ipynb`
 
@@ -126,7 +126,7 @@ The labelled connection record `friday_dataset.csv` can finally be used to train
 
 **Credit**:
 This notebook was inspired from code available in the following git repository:
-- [crisis2022](https://gitlab.inria.fr/mlanvin/crisis2022) which comes with [5](#references).
+- [crisis2022](https://gitlab.inria.fr/mlanvin/crisis2022) which comes with [[5]](#references).
 
 ### References
 
